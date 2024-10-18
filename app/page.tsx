@@ -186,9 +186,9 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold">María R.</h3>
               <p className="text-gray-600">
-                &quot SafeRoute me ha permitido planificar mis rutas diarias con
-                seguridad. Ahora me siento mucho más segura caminando por la
-                ciudad. &quot
+                &quot; SafeRoute me ha permitido planificar mis rutas diarias
+                con seguridad. Ahora me siento mucho más segura caminando por la
+                ciudad. &quot;
               </p>
             </div>
 
@@ -200,8 +200,8 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold">Carlos T.</h3>
               <p className="text-gray-600">
-              &quot Como turista, la app fue indispensable para moverme por Lima.
-                Las alertas me ayudaron a evitar áreas peligrosas. &quot
+                &quot; Como turista, la app fue indispensable para moverme por
+                Lima. Las alertas me ayudaron a evitar áreas peligrosas. &quot;
               </p>
             </div>
 
@@ -213,8 +213,9 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold">Ana G.</h3>
               <p className="text-gray-600">
-              &quot La información que ofrece SafeRoute es precisa y fácil de
-                entender. Es genial saber que puedo contar con una herramienta. &quot
+                &quot; La información que ofrece SafeRoute es precisa y fácil de
+                entender. Es genial saber que puedo contar con una herramienta.
+                &quot;
               </p>
             </div>
           </div>
@@ -297,7 +298,7 @@ export default function Home() {
       <footer className="bg-[#2B3D49] text-white py-12">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-start">
           <div className="mb-6 md:mb-0 md:w-1/3">
-          <Image
+            <Image
               src="/images/logo.svg"
               alt="SafeRoute Logo"
               width={60}

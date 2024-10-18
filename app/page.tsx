@@ -1,6 +1,10 @@
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="bg-gray-50 min-h-screen">
       <header className="bg-[#2B3D49] text-white">
@@ -12,9 +16,9 @@ export default function Home() {
               width={50}
               height={50}
             />
-            <span className="text-2xl font-bold ml-2">SafeRoute</span>{" "}
+            <span className="text-2xl font-bold ml-2">SafeRoute</span>
           </div>
-          <ul className="flex space-x-6">
+          <ul className="hidden md:flex space-x-6">
             <li>
               <a href="#inicio" className="hover:text-gray-300">
                 Inicio
@@ -36,7 +40,54 @@ export default function Home() {
               </a>
             </li>
           </ul>
+          <div className="md:hidden">
+            <button
+              className="text-white focus:outline-none"
+              onClick={() => setOpen(!open)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
         </nav>
+
+        {/* Menu desplegable */}
+        <div className={`md:hidden ${open ? "block" : "hidden"} bg-[#2B3D49"]`}>
+          <ul className="flex flex-col space-y-2 p-4">
+            <li>
+              <a href="#inicio" className="hover:text-gray-300">
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a href="#quienes-somos" className="hover:text-gray-300">
+                ¿Quiénes somos?
+              </a>
+            </li>
+            <li>
+              <a href="#testimonios" className="hover:text-gray-300">
+                Testimonios
+              </a>
+            </li>
+            <li>
+              <a href="#descargas" className="hover:text-gray-300">
+                Descargas
+              </a>
+            </li>
+          </ul>
+        </div>
       </header>
 
       <section
@@ -44,27 +95,20 @@ export default function Home() {
         className="relative flex items-center justify-center h-[90vh] bg-gray-100"
       >
         <div className="absolute inset-0 bg-cover bg-bottom bg-hero-pattern" />
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="absolute inset-0 bg-black opacity-40" />
 
         <div className="flex flex-col justify-center items-center relative text-center text-white">
-          <h1 className="w-2/3 text-6xl font-bold mb-4 p-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 p-6 w-full max-w-2xl">
             Navega Seguro por Lima con SafeRoute
           </h1>
-          <p className="w-2/3 text-lg p-6 mb-8">
+          <p className="text-lg md:text-xl p-6 mb-8 w-full max-w-2xl">
             Planifica rutas seguras y evita zonas peligrosas en Lima con alertas
             en tiempo real, todo desde nuestra app gratuita y fácil de usar.
           </p>
 
-          {/* <a
-            href="#descargar"
-            className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
-          >
-            Descarga la App
-          </a> */}
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl px-4">
             {/* Tarjeta 1 */}
-            <div className="bg-[#2B3D49] text-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <div className="hidden md:flex bg-[#2B3D49] text-white p-6 rounded-lg shadow-lg flex-col items-center">
               <div className="bg-blue-100 p-4 rounded-full mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +133,7 @@ export default function Home() {
             </div>
 
             {/* Tarjeta 2 */}
-            <div className="bg-[#2B3D49] text-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <div className="hidden md:flex bg-[#2B3D49] text-white p-6 rounded-lg shadow-lg flex-col items-center">
               <div className="bg-red-100 p-4 rounded-full mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +158,7 @@ export default function Home() {
             </div>
 
             {/* Tarjeta 3 */}
-            <div className="bg-[#2B3D49] text-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <div className="hidden md:flex bg-[#2B3D49] text-white p-6 rounded-lg shadow-lg flex-col items-center">
               <div className="bg-green-100 p-4 rounded-full mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -141,10 +185,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="quienes-somos" className="container mx-auto py-16 relative">
+      <section
+        id="quienes-somos"
+        className="container mx-auto py-2 md:py-16 relative"
+      >
         <div className="flex flex-col md:flex-row items-center md:space-x-6 relative text-white ">
-          <div className="absolute md:w-1/2 md:h-96 bg-[#2B3D49] md:top-1/3 top-0 right-10 md:right-1/4 z-50 rounded-lg shadow-lg flex flex-col justify-around items-center">
-            <h2 className=" text-4xl font-bold">¿Quiénes somos?</h2>
+          <div className="md:absolute md:w-1/2 md:h-96 bg-[#2B3D49] md:top-1/3 top-0 right-10 md:right-1/4 z-50 rounded-lg shadow-lg flex flex-col justify-around items-center">
+            <h2 className="text-4xl font-bold">¿Quiénes somos?</h2>
             <p className="font-extralight text-md text-balance text-center px-6">
               Somos un equipo de estudiantes de la UPC comprometidos con mejorar
               la seguridad en Lima. A través de SafeRoute, utilizamos tecnología
@@ -160,7 +207,7 @@ export default function Home() {
               <li>Tecnología de geolocalización avanzada</li>
             </ul>
           </div>
-          <div className=" md:w-1/2 mt-6 md:mt-0 z-40 ">
+          <div className="md:w-1/2 mt-6 md:mt-0 z-40 ">
             <img
               src="/images/bg2.jpg"
               alt="Quienes somos"
@@ -224,9 +271,9 @@ export default function Home() {
 
       <section
         id="descargas"
-        className="bg-blue-800 py-12 text-white text-center relative"
+        className="bg-[#2B3D49] py-12 text-white text-center relative"
       >
-        <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-blue-700 to-blue-900" />
+        <div className="absolute inset-0" />
         <h2 className="text-4xl font-bold mb-6 relative z-10">
           Descarga SafeRoute y Mantente Seguro
         </h2>
@@ -234,29 +281,29 @@ export default function Home() {
           Accede a rutas más seguras y alertas en tiempo real desde tu celular.
           Disponible para iOS y Android.
         </p>
-        <div className="flex justify-center space-x-6 relative z-10">
+        <div className="flex justify-center space-x-6 relative z-10 flex-wrap">
           <a
             href="https://apps.apple.com/app/idXXXXXXXXX" // Reemplaza con tu enlace de App Store
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-white text-blue-800 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            className="inline-block rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             <img
-              src="/images/appstore.png"
+              src="/images/bt1.svg"
               alt="Descargar en App Store"
-              className="w-40 p-4"
+              className="h-12 w-auto p-2 bg-white rounded-lg"
             />
           </a>
           <a
             href="https://play.google.com/store/apps/details?id=XXXXXXXXX" // Reemplaza con tu enlace de Google Play
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-white text-blue-800 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            className="inline-block rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
           >
             <img
-              src="/images/playstore.png"
+              src="/images/bt2.svg"
               alt="Descargar en Google Play"
-              className="w-40 p-4"
+              className="h-12 w-auto p-2 bg-white rounded-lg"
             />
           </a>
         </div>
@@ -296,7 +343,7 @@ export default function Home() {
       </section>
 
       <footer className="bg-[#2B3D49] text-white py-12">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-start">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-start px-4">
           <div className="mb-6 md:mb-0 md:w-1/3">
             <Image
               src="/images/logo.svg"
@@ -313,9 +360,9 @@ export default function Home() {
               reservados.
             </p>
           </div>
-          <div className="md:w-1/3">
+          <div className="mb-6 md:mb-0 md:w-1/3">
             <h4 className="text-lg font-semibold mb-2">Enlaces Útiles</h4>
-            <div className="space-y-2  flex flex-col">
+            <div className="space-y-2 flex flex-col">
               <a
                 href="#"
                 className="hover:text-gray-400 transition duration-200"
@@ -342,7 +389,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="md:w-1/3 mt-6 md:mt-0">
+          <div className="md:w-1/3">
             <h4 className="text-lg font-semibold mb-2">Síguenos</h4>
             <div className="flex space-x-4">
               <a

@@ -186,9 +186,9 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold">María R.</h3>
               <p className="text-gray-600">
-                "SafeRoute me ha permitido planificar mis rutas diarias con
+                &quot SafeRoute me ha permitido planificar mis rutas diarias con
                 seguridad. Ahora me siento mucho más segura caminando por la
-                ciudad."
+                ciudad. &quot
               </p>
             </div>
 
@@ -200,8 +200,8 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold">Carlos T.</h3>
               <p className="text-gray-600">
-                "Como turista, la app fue indispensable para moverme por Lima.
-                Las alertas me ayudaron a evitar áreas peligrosas."
+              &quot Como turista, la app fue indispensable para moverme por Lima.
+                Las alertas me ayudaron a evitar áreas peligrosas. &quot
               </p>
             </div>
 
@@ -213,8 +213,8 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold">Ana G.</h3>
               <p className="text-gray-600">
-                "La información que ofrece SafeRoute es precisa y fácil de
-                entender. Es genial saber que puedo contar con una herramienta."
+              &quot La información que ofrece SafeRoute es precisa y fácil de
+                entender. Es genial saber que puedo contar con una herramienta. &quot
               </p>
             </div>
           </div>

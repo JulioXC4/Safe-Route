@@ -511,7 +511,6 @@ export default function Home() {
 /* 
 Julio Castro
 Responsable de la mayor parte del proyecto, incluyendo la estructuración inicial del código, integración de componentes, manejo de hooks como useState, navegación en pantallas móviles y escritorio, gestión de imágenes, y el despliegue final de la aplicación.
-test
 */
 
 /* 

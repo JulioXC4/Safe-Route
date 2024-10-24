@@ -7,7 +7,7 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   return (
     <div className="bg-gray-50 min-h-screen">
-      <header className="bg-[#2B3D49] text-white">
+      <header className="bg-[#2B3D49] text-white sticky top-0 z-50">
         <nav className="container mx-auto flex justify-between items-center p-6">
           <div className="flex items-center">
             <Image
@@ -18,6 +18,7 @@ export default function Home() {
             />
             <span className="text-2xl font-bold ml-2">SafeRoute</span>
           </div>
+          {/* Menú de navegación para pantallas medianas y grandes */}
           <ul className="hidden md:flex space-x-6">
             <li>
               <a href="#inicio" className="hover:text-gray-300">
@@ -39,7 +40,21 @@ export default function Home() {
                 Descargas
               </a>
             </li>
+            <li>
+              <a href="#contact-form" className="hover:text-gray-300">
+                Contacto
+              </a>
+            </li>
           </ul>
+
+          {/* Botón de inicio de sesión para pantallas medianas y grandes */}
+          <div className="hidden md:block">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+              Iniciar Sesión
+            </button>
+          </div>
+
+          {/* Botón hamburguesa para menú móvil */}
           <div className="md:hidden">
             <button
               className="text-white focus:outline-none"
@@ -63,8 +78,8 @@ export default function Home() {
           </div>
         </nav>
 
-        {/* Menu desplegable */}
-        <div className={`md:hidden ${open ? "block" : "hidden"} bg-[#2B3D49"]`}>
+        {/* Menú desplegable para pantallas pequeñas */}
+        <div className={`md:hidden ${open ? "block" : "hidden"} bg-[#2B3D49]`}>
           <ul className="flex flex-col space-y-2 p-4">
             <li>
               <a href="#inicio" className="hover:text-gray-300">
@@ -85,6 +100,17 @@ export default function Home() {
               <a href="#descargas" className="hover:text-gray-300">
                 Descargas
               </a>
+            </li>
+            <li>
+              <a href="#contact-form" className="hover:text-gray-300">
+                Contacto
+              </a>
+            </li>
+            {/* Botón de inicio de sesión para pantallas pequeñas */}
+            <li>
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg w-full">
+                Iniciar Sesión
+              </button>
             </li>
           </ul>
         </div>
@@ -108,7 +134,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl px-4">
             {/* Tarjeta 1 */}
-            <div className="hidden md:flex bg-[#2B3D49] text-white p-6 rounded-lg shadow-lg flex-col items-center">
+            <div className="hidden md:flex bg-[#404d55] text-white p-6 rounded-lg shadow-lg flex-col items-center">
               <div className="bg-blue-100 p-4 rounded-full mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +159,7 @@ export default function Home() {
             </div>
 
             {/* Tarjeta 2 */}
-            <div className="hidden md:flex bg-[#2B3D49] text-white p-6 rounded-lg shadow-lg flex-col items-center">
+            <div className="hidden md:flex bg-[#404d55] text-white p-6 rounded-lg shadow-lg flex-col items-center">
               <div className="bg-red-100 p-4 rounded-full mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +184,7 @@ export default function Home() {
             </div>
 
             {/* Tarjeta 3 */}
-            <div className="hidden md:flex bg-[#2B3D49] text-white p-6 rounded-lg shadow-lg flex-col items-center">
+            <div className="hidden md:flex bg-[#404d55] text-white p-6 rounded-lg shadow-lg flex-col items-center">
               <div className="bg-green-100 p-4 rounded-full mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -190,7 +216,7 @@ export default function Home() {
         className="container mx-auto py-2 md:py-16 relative"
       >
         <div className="flex flex-col md:flex-row items-center md:space-x-6 relative text-white ">
-          <div className="md:absolute md:w-1/2 md:h-96 bg-[#2B3D49] md:top-1/3 top-0 right-10 md:right-1/4 z-50 rounded-lg shadow-lg flex flex-col justify-around items-center">
+          <div className="md:absolute md:w-1/2 md:h-96 bg-[#404d55] md:top-1/3 top-0 right-10 md:right-1/4 z-40 rounded-lg shadow-lg flex flex-col justify-around items-center">
             <h2 className="text-4xl font-bold">¿Quiénes somos?</h2>
             <p className="font-extralight text-md text-balance text-center px-6">
               Somos un equipo de estudiantes de la UPC comprometidos con mejorar
@@ -207,7 +233,7 @@ export default function Home() {
               <li>Tecnología de geolocalización avanzada</li>
             </ul>
           </div>
-          <div className="md:w-1/2 mt-6 md:mt-0 z-40 ">
+          <div className="md:w-1/2 mt-6 md:mt-0 z-30 ">
             <img
               src="/images/bg2.jpg"
               alt="Quienes somos"
@@ -271,7 +297,7 @@ export default function Home() {
 
       <section
         id="descargas"
-        className="bg-[#2B3D49] py-12 text-white text-center relative"
+        className="bg-[#404d55] py-12 text-white text-center relative"
       >
         <div className="absolute inset-0" />
         <h2 className="text-4xl font-bold mb-6 relative z-10">
@@ -315,28 +341,86 @@ export default function Home() {
           <p className="text-gray-700 mb-8">
             Estamos para brindarte toda la información y atención que necesites.
           </p>
-          <div className="flex flex-col md:flex-row items-center md:justify-between">
-            <div className="md:w-1/2 text-left space-y-4">
-              <p>
-                <strong>Email:</strong>{" "}
-                <a href="mailto:info@saferoute.com" className="text-blue-600">
-                  info@saferoute.com
-                </a>
-              </p>
-              <p>
-                <strong>Teléfono:</strong> +54 9 123456789
-              </p>
-              <p>
-                <strong>Dirección:</strong> Av. Principal 468, Lima, Perú
-              </p>
+
+          {/* Contenedor principal de dos columnas */}
+          <div className="flex flex-col md:flex-row md:space-x-6">
+            {/* Columna izquierda - Formulario */}
+            <div className="md:w-1/2 bg-white p-6 rounded-lg shadow-lg mb-8 md:mb-0">
+              <form>
+                <div className="mb-4">
+                  <label
+                    htmlFor="name"
+                    className="block text-gray-700 font-bold mb-2"
+                  >
+                    Nombre:
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Tu nombre"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    htmlFor="email"
+                    className="block text-gray-700 font-bold mb-2"
+                  >
+                    Correo electrónico:
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Tu correo electrónico"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    htmlFor="message"
+                    className="block text-gray-700 font-bold mb-2"
+                  >
+                    Mensaje:
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    placeholder="Escribe tu mensaje"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none"
+                >
+                  Enviar Mensaje
+                </button>
+              </form>
             </div>
-            {/* Mapa */}
-            <div className="md:w-1/2 mt-6 md:mt-0">
-              <iframe
-                className="w-full h-64 rounded-lg"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4604923706616!2d-77.03449248501124!3d-12.046373091936842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8f6aa8455b1%3A0x7402c482dc01e2fa!2sAv.%20Principal%20468%2C%20San%20Isidro%2015073%2C%20Per%C3%BA!5e0!3m2!1sen!2sus!4v1601405425336!5m2!1sen!2sus"
-                aria-hidden="false"
-              />
+
+            {/* Columna derecha - Información de contacto y mapa */}
+            <div className="md:w-1/2 space-y-4">
+              <div className="text-left">
+                <p>
+                  <strong>Email:</strong>{" "}
+                  <a href="mailto:info@saferoute.com" className="text-blue-600">
+                    info@saferoute.com
+                  </a>
+                </p>
+                <p>
+                  <strong>Teléfono:</strong> +54 9 123456789
+                </p>
+                <p>
+                  <strong>Dirección:</strong> Av. Principal 468, Lima, Perú
+                </p>
+              </div>
+              <div>
+                <iframe
+                  className="w-full h-64 rounded-lg"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4604923706616!2d-77.03449248501124!3d-12.046373091936842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8f6aa8455b1%3A0x7402c482dc01e2fa!2sAv.%20Principal%20468%2C%20San%20Isidro%2015073%2C%20Per%C3%BA!5e0!3m2!1sen!2sus!4v1601405425336!5m2!1sen!2sus"
+                  aria-hidden="false"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -423,3 +507,49 @@ export default function Home() {
     </div>
   );
 }
+
+/* 
+Julio Castro
+Responsable de la mayor parte del proyecto, incluyendo la estructuración inicial del código, integración de componentes, manejo de hooks como useState, navegación en pantallas móviles y escritorio, gestión de imágenes, y el despliegue final de la aplicación.
+
+*/
+
+/* 
+Sergio Aguirre
+
+*/
+
+/* 
+Sebastian arotinco
+
+*/
+
+/* 
+Jose Castillo
+
+*/
+
+/* 
+Jose Castillo
+
+*/
+
+/* 
+Alessandra Cury
+
+*/
+
+/* 
+Domenico Casaretto
+
+*/
+
+/* 
+Sebastian Montañez
+
+*/
+
+/* 
+Diego Peralta
+
+*/

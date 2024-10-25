@@ -516,7 +516,7 @@ test2
 
 /* 
 Sergio Aguirre
-
+Implementó el diseño y estructura del formulario de contacto, manejando la validación básica y asegurando la responsividad.
 */
 
 /* 

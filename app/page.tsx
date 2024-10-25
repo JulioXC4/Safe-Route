@@ -526,7 +526,7 @@ Diseñó la sección de "Testimonios" con estilos adaptativos, además de implem
 
 /* 
 Jose Castillo
-
+Desarrolló el menú de navegación para pantallas pequeñas, incluyendo la funcionalidad del menú hamburguesa y su integración con el estado.
 */
 
 /* 

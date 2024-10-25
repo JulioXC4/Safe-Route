@@ -257,7 +257,7 @@ export default function Home() {
                 alt="María R."
                 className="w-24 h-24 mx-auto rounded-full mb-4"
               />
-              <h3 className="text-xl font-bold">María R.</h3>
+              <h3 className="text-xl font-bold">Carlos T.</h3>
               <p className="text-gray-600">
                 &quot; SafeRoute me ha permitido planificar mis rutas diarias
                 con seguridad. Ahora me siento mucho más segura caminando por la
@@ -271,7 +271,7 @@ export default function Home() {
                 alt="Carlos T."
                 className="w-24 h-24 mx-auto rounded-full mb-4"
               />
-              <h3 className="text-xl font-bold">Carlos T.</h3>
+              <h3 className="text-xl font-bold">María R.</h3>
               <p className="text-gray-600">
                 &quot; Como turista, la app fue indispensable para moverme por
                 Lima. Las alertas me ayudaron a evitar áreas peligrosas. &quot;

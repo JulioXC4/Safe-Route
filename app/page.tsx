@@ -551,5 +551,5 @@ d
 
 /* 
 Diego Peralta
-
+Implementó la sección de "Rutas Seguras", manejando los componentes de tarjetas informativas con iconos SVG y la adaptación para pantallas grandes y pequeñas.
 */

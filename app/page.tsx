@@ -511,32 +511,27 @@ export default function Home() {
 /* 
 Julio Castro
 Responsable de la mayor parte del proyecto, incluyendo la estructuración inicial del código, integración de componentes, manejo de hooks como useState, navegación en pantallas móviles y escritorio, gestión de imágenes, y el despliegue final de la aplicación.
-
+test2
 */
 
 /* 
 Sergio Aguirre
-
+Implementó el diseño y estructura del formulario de contacto, manejando la validación básica y asegurando la responsividad.
 */
 
 /* 
 Sebastian arotinco
-
+Diseñó la sección de "Testimonios" con estilos adaptativos, además de implementar los componentes de usuario en formato de tarjeta.
 */
 
 /* 
 Jose Castillo
-
-*/
-
-/* 
-Jose Castillo
-
+Desarrolló el menú de navegación para pantallas pequeñas, incluyendo la funcionalidad del menú hamburguesa y su integración con el estado.
 */
 
 /* 
 Alessandra Cury
-
+Se encargó del diseño visual y estilización de las secciones de "Quienes Somos" y "Descargas", asegurando una experiencia de usuario coherente.
 */
 
 /* 
@@ -546,10 +541,10 @@ Domenico Casaretto
 
 /* 
 Sebastian Montañez
-
+d
 */
 
 /* 
 Diego Peralta
-
+Implementó la sección de "Rutas Seguras", manejando los componentes de tarjetas informativas con iconos SVG y la adaptación para pantallas grandes y pequeñas.
 */

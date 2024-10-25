@@ -536,6 +536,7 @@ Se encargó del diseño visual y estilización de las secciones de "Quienes Somo
 
 /* 
 Domenico Casaretto
+Desarrolló la sección de inicio de la página, incluyendo la imagen de fondo y la superposición de contenido, además de su responsividad en pantallas.
 
 */
 

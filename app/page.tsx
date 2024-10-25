@@ -536,7 +536,7 @@ Jose Castillo
 
 /* 
 Alessandra Cury
-
+Se encargó del diseño visual y estilización de las secciones de "Quienes Somos" y "Descargas", asegurando una experiencia de usuario coherente.
 */
 
 /* 

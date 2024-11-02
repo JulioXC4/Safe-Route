@@ -11,7 +11,7 @@ export default function Home() {
         <nav className="container mx-auto flex justify-between items-center p-6">
           <div className="flex items-center">
             <Image
-              src="/images/logo.svg"
+              src="/assets/images/logo.svg"
               alt="SafeRoute Logo"
               width={50}
               height={50}
@@ -235,7 +235,7 @@ export default function Home() {
           </div>
           <div className="md:w-1/2 mt-6 md:mt-0 z-30 ">
             <img
-              src="/images/bg2.jpg"
+              src="/assets/images/bg2.jpg"
               alt="Quienes somos"
               className="rounded-lg shadow-lg w-full"
             />
@@ -253,7 +253,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <img
-                src="/images/p1.jpg"
+                src="/assets/images/p1.jpg"
                 alt="María R."
                 className="w-24 h-24 mx-auto rounded-full mb-4"
               />
@@ -267,7 +267,7 @@ export default function Home() {
 
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <img
-                src="/images/p2.jpg"
+                src="/assets/images/p2.jpg"
                 alt="Carlos T."
                 className="w-24 h-24 mx-auto rounded-full mb-4"
               />
@@ -280,7 +280,7 @@ export default function Home() {
 
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <img
-                src="/images/p3.jpg"
+                src="/assets/images/p3.jpg"
                 alt="Ana G."
                 className="w-24 h-24 mx-auto rounded-full mb-4"
               />
@@ -315,7 +315,7 @@ export default function Home() {
             className="inline-block rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             <img
-              src="/images/bt1.svg"
+              src="/assets/images/bt1.svg"
               alt="Descargar en App Store"
               className="h-12 w-auto p-2 bg-white rounded-lg"
             />
@@ -327,7 +327,7 @@ export default function Home() {
             className="inline-block rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
           >
             <img
-              src="/images/bt2.svg"
+              src="/assets/images/bt2.svg"
               alt="Descargar en Google Play"
               className="h-12 w-auto p-2 bg-white rounded-lg"
             />
@@ -430,7 +430,7 @@ export default function Home() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-start px-4">
           <div className="mb-6 md:mb-0 md:w-1/3">
             <Image
-              src="/images/logo.svg"
+              src="/assets/images/logo.svg"
               alt="SafeRoute Logo"
               width={60}
               height={60}

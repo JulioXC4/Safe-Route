@@ -1,0 +1,17 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.bg-hero-pattern {
+  background-image: url("/images/hero.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.bg-[#2B3D49] {
+  background-color: #2B3D49;
+}
+
+.bg-[#404d55] {
+  background-color: #404d55;
+}

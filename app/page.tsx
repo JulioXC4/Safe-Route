@@ -534,8 +534,7 @@ Desarrolló el menú de navegación para pantallas pequeñas, incluyendo la func
 /* 
 Alessandra Cury
 Se encargó del diseño visual y estilización de las secciones de "Quienes Somos" y "Descargas", asegurando una experiencia de usuario coherente.
-*/
-
+feature/testimonials-section */
 /* 
 Domenico Casaretto
 Desarrolló la sección de inicio de la página, incluyendo la imagen de fondo y la superposición de contenido, además de su responsividad en pantallas.

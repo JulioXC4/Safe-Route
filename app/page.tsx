@@ -522,6 +522,7 @@ Implementó el diseño y estructura del formulario de contacto, manejando la val
 /* 
 Sebastian arotinco
 Diseñó la sección de "Testimonios" con estilos adaptativos, además de implementar los componentes de usuario en formato de tarjeta.
+feature/download-section
 */
 
 /* 

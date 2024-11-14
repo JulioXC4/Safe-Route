@@ -2,9 +2,20 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-//Test prep
+
 export default function Home() {
   const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isRegistering, setIsRegistering] = useState(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => {
+    setIsOpen(false);
+    setIsRegistering(false);
+  };
+
+  const switchToRegister = () => setIsRegistering(true);
+  const switchToLogin = () => setIsRegistering(false);
   return (
     <div className="bg-gray-50 min-h-screen">
       <header className="bg-[#2B3D49] text-white sticky top-0 z-50">
@@ -49,7 +60,10 @@ export default function Home() {
 
           {/* Botón de inicio de sesión para pantallas medianas y grandes */}
           <div className="hidden md:block">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+            <button
+              onClick={openModal}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+            >
               Iniciar Sesión
             </button>
           </div>
@@ -504,6 +518,160 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      {/* Modal de inicio de sesión / registro */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm h-[500px] flex flex-col justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {isRegistering ? (
+              // Formulario de registro
+              <div>
+                <h2 className="text-2xl font-semibold mb-4">Registrarse</h2>
+
+                <form className="space-y-4">
+                  <div>
+                    <label
+                      htmlFor="username"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Usuario
+                    </label>
+                    <input
+                      type="text"
+                      id="username"
+                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Tu usuario"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Correo Electrónico
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Tu correo electrónico"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="password"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Contraseña
+                    </label>
+                    <input
+                      type="password"
+                      id="password"
+                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Tu contraseña"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
+                  >
+                    Registrarse
+                  </button>
+                </form>
+
+                <button
+                  onClick={switchToLogin}
+                  className="mt-4 text-blue-500 hover:text-blue-700"
+                >
+                  ← Atrás a Iniciar Sesión
+                </button>
+              </div>
+            ) : (
+              // Formulario de inicio de sesión
+              <div>
+                <h2 className="text-2xl font-semibold mb-4">Iniciar Sesión</h2>
+
+                <form className="space-y-4">
+                  <div>
+                    <label
+                      htmlFor="username"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Usuario
+                    </label>
+                    <input
+                      type="text"
+                      id="username"
+                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Tu usuario"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="password"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Contraseña
+                    </label>
+                    <input
+                      type="password"
+                      id="password"
+                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Tu contraseña"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
+                  >
+                    Iniciar Sesión
+                  </button>
+                </form>
+
+                <div className="mt-4">
+                  <button className="w-full flex items-center justify-center bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg">
+                    <svg
+                      className="w-5 h-5 mr-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 48 48"
+                    >
+                      <path
+                        fill="#EA4335"
+                        d="M24 9.5c3.09 0 5.47 1.19 6.78 2.17l4.97-4.97C32.69 3.84 28.73 2 24 2 15.81 2 9.06 6.59 6.32 13.41l5.91 4.6C13.99 12.62 18.61 9.5 24 9.5z"
+                      />
+                      <path
+                        fill="#34A853"
+                        d="M48 24.56c0-1.76-.15-3.52-.45-5.22H24v9.88h13.52c-.62 3.25-2.34 6.08-5 8.01l5.91 4.6C42.69 37.5 48 31.7 48 24.56z"
+                      />
+                      <path
+                        fill="#4A90E2"
+                        d="M6.32 13.41c-.54 1.52-.84 3.14-.84 4.86 0 1.72.3 3.34.84 4.86l5.91-4.6c-.38-1.16-.59-2.4-.59-3.74 0-1.33.21-2.57.59-3.74l-5.91-4.6z"
+                      />
+                      <path
+                        fill="#FBBC05"
+                        d="M24 48c6.47 0 11.89-2.12 15.88-5.76l-5.91-4.6C31.11 40.32 27.79 41.5 24 41.5c-5.39 0-10.01-3.12-12.68-7.91l-5.91 4.6C9.06 41.41 15.81 46 24 46z"
+                      />
+                    </svg>
+                    Iniciar con Google
+                  </button>
+                </div>
+
+                <button
+                  onClick={switchToRegister}
+                  className="mt-4 text-blue-500 hover:text-blue-700"
+                >
+                  ¿No tienes cuenta? Regístrate
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

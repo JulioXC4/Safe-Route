@@ -69,7 +69,7 @@ const crimeRateData = {
 
 const General: React.FC = () => {
   const [news, setNews] = useState<Article[]>([]);
-  const [visibleNewsCount, setVisibleNewsCount] = useState(5);
+  const [visibleNewsCount, setVisibleNewsCount] = useState(3);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -91,11 +91,30 @@ const General: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-100 max-h-screen overflow-y-auto">
+    <div className=" p-6 bg-gray-100 max-h-screen overflow-y-auto">
       <h1 className="text-2xl font-semibold mb-6">
         Sección General - Safe Route
       </h1>
-
+      {/* Mensaje de bienvenida para el usuario */}
+      <div className="bg-white shadow-md p-6 rounded-lg mb-8">
+        <h2 className="text-xl font-semibold mb-4">
+          ¡Bienvenido a Safe Route!
+        </h2>
+        <p className="text-gray-600 mb-4">
+          En Safe Route, te ayudamos a conocer los niveles de peligro y
+          seguridad al moverte de un lugar a otro.
+        </p>
+        <p className="text-gray-600 mb-4">
+          Consulta las zonas más seguras y peligrosas, y mantente informado con
+          nuestras noticias sobre criminalidad.
+        </p>
+        <a
+          href="/mapa" // Cambia la URL si es necesario
+          className="text-blue-600 hover:underline font-semibold"
+        >
+          Explorar el mapa y ver rutas seguras
+        </a>
+      </div>
       {/* Noticias sobre criminalidad y zonas peligrosas */}
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-4">Noticias Recientes</h2>
@@ -133,32 +152,6 @@ const General: React.FC = () => {
             Ver más noticias
           </button>
         )}
-      </div>
-
-      {/* Gráfico de barras de incidencia de crímenes */}
-      <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">
-          Incidencia de Crímenes por Zona
-        </h2>
-        <div className="h-64 p-4 bg-white shadow-md rounded-lg">
-          <Bar
-            data={crimeData}
-            options={{ responsive: true, maintainAspectRatio: false }}
-          />
-        </div>
-      </div>
-
-      {/* Gráfico circular de tipos de crímenes */}
-      <div>
-        <h2 className="text-xl font-semibold mb-4">
-          Distribución de Tipos de Crímenes
-        </h2>
-        <div className="h-64 p-4 bg-white shadow-md rounded-lg">
-          <Pie
-            data={crimeRateData}
-            options={{ responsive: true, maintainAspectRatio: false }}
-          />
-        </div>
       </div>
     </div>
   );

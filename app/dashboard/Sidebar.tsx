@@ -1,4 +1,6 @@
-import { FiSettings, FiLogOut, FiHome, FiList, FiUser } from "react-icons/fi";
+import Link from "next/link";
+import { FiSettings, FiLogOut, FiHome, FiList, FiUser, FiMapPin, FiEdit3, FiMessageSquare, FiBarChart } from "react-icons/fi";
+
 export const Sidebar = ({ userName }: any) => {
   return (
     <div className="w-64 bg-[#2B3D49] text-gray-200 flex flex-col justify-between p-6">
@@ -9,35 +11,44 @@ export const Sidebar = ({ userName }: any) => {
           alt="Perfil"
           className="w-24 h-24 rounded-full mb-4 border-2 border-gray-500"
         />
-        <h2 className="text-xl font-semibold">{userName}</h2>   
+        <h2 className="text-xl font-semibold">{userName}</h2>
       </div>
 
       {/* Secciones de Navegación */}
       <div className="flex flex-col mt-8 space-y-4">
-        <button className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition">
+        <Link href={'/dashboard'} className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition">
           <FiHome className="text-xl" />
-          <span>Sección 1</span>
-        </button>
-        <button className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition">
-          <FiList className="text-xl" />
-          <span>Sección 2</span>
-        </button>
-        <button className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition">
-          <FiUser className="text-xl" />
-          <span>Sección 3</span>
-        </button>
+          <span>Resumen</span>
+        </Link>
+        <Link href={'/dashboard/routes'} className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition">
+          <FiMapPin className="text-xl" />
+          <span>Tus rutas</span>
+        </Link>
+        <Link href={'/dashboard/route'} className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition">
+          <FiEdit3 className="text-xl" />
+          <span>Crear ruta</span>
+        </Link>
+        <Link href={'/dashboard/forum'} className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition">
+          <FiMessageSquare className="text-xl" />
+          <span>Foro</span>
+        </Link>
+        {/* Nueva sección de Estadísticas */}
+        <Link href={'/dashboard/statistics'} className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition">
+          <FiBarChart className="text-xl" />
+          <span>Estadísticas</span>
+        </Link>
       </div>
 
       {/* Botones de Configuración y Salir */}
       <div className="flex flex-col space-y-4 mt-8 border-t border-gray-700 pt-6">
-        <button className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition">
+        <Link href={'/dashboard/configuration'} className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition">
           <FiSettings className="text-xl" />
           <span>Configuración</span>
-        </button>
-        <button className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition text-red-400">
+        </Link>
+        <Link href={'/'} className="flex items-center space-x-3 py-2 px-4 hover:bg-gray-800 rounded transition text-red-400">
           <FiLogOut className="text-xl" />
           <span>Salir</span>
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -531,6 +532,9 @@ export default function Home() {
             {isRegistering ? (
               // Formulario de registro
               <div>
+                <h1 className="text-4xl text-center font-extrabold text-[#2B3D49] text-transparent bg-clip-text pb-4">
+                  Safe Route
+                </h1>
                 <h2 className="text-2xl font-semibold mb-4">Registrarse</h2>
 
                 <form className="space-y-4">
@@ -580,7 +584,7 @@ export default function Home() {
                     type="submit"
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
                   >
-                    Registrarse
+                    <Link href={"/dashboard"}>Registrarse</Link>
                   </button>
                 </form>
 
@@ -594,6 +598,9 @@ export default function Home() {
             ) : (
               // Formulario de inicio de sesión
               <div>
+                <h1 className="text-4xl text-center font-extrabold text-[#2B3D49] text-transparent bg-clip-text pb-4">
+                  Safe Route
+                </h1>
                 <h2 className="text-2xl font-semibold mb-4">Iniciar Sesión</h2>
 
                 <form className="space-y-4">
@@ -629,7 +636,7 @@ export default function Home() {
                     type="submit"
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
                   >
-                    Iniciar Sesión
+                    <Link href={"/dashboard"}>Iniciar Sesión</Link>
                   </button>
                 </form>
 
@@ -657,7 +664,7 @@ export default function Home() {
                         d="M24 48c6.47 0 11.89-2.12 15.88-5.76l-5.91-4.6C31.11 40.32 27.79 41.5 24 41.5c-5.39 0-10.01-3.12-12.68-7.91l-5.91 4.6C9.06 41.41 15.81 46 24 46z"
                       />
                     </svg>
-                    Iniciar con Google
+                    <Link href={"/dashboard"}>Iniciar con Google</Link>
                   </button>
                 </div>
 

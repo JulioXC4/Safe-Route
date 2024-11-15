@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Sidebar } from "../Sidebar";
 import React from "react";
 import { Bar, Pie } from "react-chartjs-2";
@@ -70,7 +70,7 @@ const Statistics = () => {
       <Sidebar userName="Usuario" />
 
       {/* Contenido del Dashboard */}
-      <div className="h-screen flex-1 p-6 bg-gray-100 overflow-y-auto">
+      <div className="h-screen flex-1 p-6 bg-gray-100">
         {/* Gráfico de barras de incidencia de crímenes */}
         <div className="mb-8">
           <h2 className="text-xl font-semibold mb-4">
@@ -84,24 +84,12 @@ const Statistics = () => {
           </div>
         </div>
 
-        {/* Sección con dos gráficos de distribución de crímenes (flex responsivo) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-          {/* Gráfico de barras de distribución de crímenes */}
+        {/* Gráfico circular de tipos de crímenes */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">
+            Distribución de Tipos de Crímenes
+          </h2>
           <div className="h-64 p-4 bg-white shadow-md rounded-lg">
-            <h2 className="text-xl font-semibold mb-4">
-              Incidencia de Crímenes por Zona
-            </h2>
-            <Bar
-              data={crimeData}
-              options={{ responsive: true, maintainAspectRatio: false }}
-            />
-          </div>
-
-          {/* Gráfico circular de tipos de crímenes */}
-          <div className="h-64 p-4 bg-white shadow-md rounded-lg">
-            <h2 className="text-xl font-semibold mb-4">
-              Distribución de Tipos de Crímenes
-            </h2>
             <Pie
               data={crimeRateData}
               options={{ responsive: true, maintainAspectRatio: false }}

@@ -98,7 +98,7 @@ const Route = () => {
           <GoogleMap
             id="google-map"
             mapContainerStyle={{ width: "100%", height: "400px" }}
-            center={{ lat: 19.4326, lng: -99.1332 }}
+            center={{ lat: -12.0464, lng: -77.0428 }}
             zoom={12}
           >
             {/* Renderiza la ruta si existe */}

@@ -75,7 +75,7 @@ const General: React.FC = () => {
     const fetchNews = async () => {
       try {
         const response = await axios.get<{ articles: Article[] }>(
-          `https://newsapi.org/v2/everything?q=robo%20Peru%20OR%20"zonas%20peligrosas"&apiKey=4614d5e63ba54f2aa6e2c52eabc059b3&language=es`
+          `https://newsapi.org/v2/everything?q=robo%20Peru%20OR%20"zonas%20peligrosas"&apiKey=${process.env.NEXT_PUBLIC_NEWS_API}&language=es`
         );
         setNews(response.data.articles);
       } catch (error) {

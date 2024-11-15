@@ -4,7 +4,6 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Bar, Pie } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -41,31 +40,6 @@ interface Article {
   content: string | null;
 }
 
-// Mock data para los gráficos de ejemplo
-const crimeData = {
-  labels: ["Zona 1", "Zona 2", "Zona 3", "Zona 4", "Zona 5"],
-  datasets: [
-    {
-      label: "Incidentes en el último mes",
-      data: [12, 19, 7, 15, 10],
-      backgroundColor: "rgba(54, 162, 235, 0.7)",
-      borderColor: "rgba(54, 162, 235, 1)",
-      borderWidth: 1,
-    },
-  ],
-};
-
-const crimeRateData = {
-  labels: ["Robos", "Asaltos", "Vandalismo", "Homicidios", "Otros"],
-  datasets: [
-    {
-      label: "Porcentaje de Crímenes",
-      data: [30, 20, 15, 10, 25],
-      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"],
-      hoverOffset: 4,
-    },
-  ],
-};
 
 const General: React.FC = () => {
   const [news, setNews] = useState<Article[]>([]);

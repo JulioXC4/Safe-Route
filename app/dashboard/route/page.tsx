@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import {
   GoogleMap,
   LoadScript,
-  DirectionsService,
   DirectionsRenderer,
   Marker,
 } from "@react-google-maps/api";

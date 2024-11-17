@@ -691,7 +691,7 @@ test2
 
 /* 
 Sergio Aguirre
-Diseño de los colores en la landing pag, navegación en pantallas móviles y escritorio
+Diseño de los colores en la landing pag, navegación en pantallas móviles y escritorio 
 */
 
 /* 

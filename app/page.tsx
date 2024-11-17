@@ -697,6 +697,7 @@ Diseño de los colores en la landing pag, navegación en pantallas móviles y es
 /* 
 Sebastian arotinco
 Diseñó la sección de "Testimonios" con estilos adaptativos, además de implementar los componentes de usuario en formato de tarjeta.
+Ayude en el diseño de estadistica de la pagina
 */
 
 /* 

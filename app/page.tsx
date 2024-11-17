@@ -708,6 +708,7 @@ Ajustar estilo CSS para alinear imágenes correctamente
 /* 
 Alessandra Cury
 Se encargó del diseño visual y estilización de las secciones de "Quienes Somos" y "Descargas", asegurando una experiencia de usuario coherente.
+Contribuyó en la sección "Alertas" de la página web.
 */
 
 /* 

@@ -532,7 +532,7 @@ export default function Home() {
             {isRegistering ? (
               // Formulario de registro
               <div>
-                <h1 className="text-4xl text-center font-extrabold text-[#2B3D49] text-transparent bg-clip-text pb-4">
+                <h1 className="text-4xl text-center font-extrabold text-[#2B3D49] pb-4">
                   Safe Route
                 </h1>
                 <h2 className="text-2xl font-semibold mb-4">Registrarse</h2>
@@ -598,7 +598,7 @@ export default function Home() {
             ) : (
               // Formulario de inicio de sesión
               <div>
-                <h1 className="text-4xl text-center font-extrabold text-[#2B3D49] text-transparent bg-clip-text pb-4">
+                <h1 className="text-4xl text-center font-extrabold text-[#2B3D49] pb-4">
                   Safe Route
                 </h1>
                 <h2 className="text-2xl font-semibold mb-4">Iniciar Sesión</h2>

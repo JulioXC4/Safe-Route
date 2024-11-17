@@ -691,9 +691,7 @@ test2
 
 /* 
 Sergio Aguirre
-Implementó el diseño y estructura del formulario de contacto, manejando la validación básica y asegurando la responsividad.
-Hero- Section
-Integracion de componentes 
+Diseño de los colores en la landing pag, navegación en pantallas móviles y escritorio
 */
 
 /* 

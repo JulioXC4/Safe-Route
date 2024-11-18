@@ -580,12 +580,14 @@ export default function Home() {
                       placeholder="Tu contraseña"
                     />
                   </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
-                  >
-                    <Link href={"/dashboard"}>Registrarse</Link>
-                  </button>
+                  <div className="flex justify-center items-center">
+                    <Link
+                      href="/dashboard"
+                      className="w-full max-w-xs bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg text-center"
+                    >
+                      Registrarse
+                    </Link>
+                  </div>
                 </form>
 
                 <button
@@ -632,16 +634,20 @@ export default function Home() {
                       placeholder="Tu contraseña"
                     />
                   </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
-                  >
-                    <Link href={"/dashboard"}>Iniciar Sesión</Link>
-                  </button>
+                  <div className="flex justify-center items-center">
+                    <Link
+                      href="/dashboard"
+                      className="w-full max-w-xs bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg text-center"
+                    >
+                      Iniciar Sesión
+                    </Link>
+                  </div>
                 </form>
-
                 <div className="mt-4">
-                  <button className="w-full flex items-center justify-center bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg">
+                  <Link
+                    href="/dashboard"
+                    className="w-full flex items-center justify-center bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg"
+                  >
                     <svg
                       className="w-5 h-5 mr-2"
                       xmlns="http://www.w3.org/2000/svg"
@@ -664,8 +670,8 @@ export default function Home() {
                         d="M24 48c6.47 0 11.89-2.12 15.88-5.76l-5.91-4.6C31.11 40.32 27.79 41.5 24 41.5c-5.39 0-10.01-3.12-12.68-7.91l-5.91 4.6C9.06 41.41 15.81 46 24 46z"
                       />
                     </svg>
-                    <Link href={"/dashboard"}>Iniciar con Google</Link>
-                  </button>
+                    <span>Iniciar con Google</span>
+                  </Link>
                 </div>
 
                 <button

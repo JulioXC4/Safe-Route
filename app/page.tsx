@@ -697,28 +697,29 @@ test2
 
 /* 
 Sergio Aguirre
-Implementó el diseño y estructura del formulario de contacto, manejando la validación básica y asegurando la responsividad.
-Hero- Section
+Diseño de los colores en la landing pag, navegación en pantallas móviles y escritorio 
 */
 
 /* 
 Sebastian arotinco
 Diseñó la sección de "Testimonios" con estilos adaptativos, además de implementar los componentes de usuario en formato de tarjeta.
+Ayude en el diseño de estadistica de la pagina
 */
 
 /* 
 Jose Castillo
-Desarrolló el menú de navegación para pantallas pequeñas, incluyendo la funcionalidad del menú hamburguesa y su integración con el estado.
+Ajustar estilo CSS para alinear imágenes correctamente
 */
 
 /* 
 Alessandra Cury
 Se encargó del diseño visual y estilización de las secciones de "Quienes Somos" y "Descargas", asegurando una experiencia de usuario coherente.
+Contribuyó en la sección "Alertas" de la página web.
 */
 
 /* 
 Domenico Casaretto
-Desarrolló la sección de inicio de la página, incluyendo la imagen de fondo y la superposición de contenido, además de su responsividad en pantallas.
+Contribuyo en la seccion "Resumen" de la pagina web. 
 
 */
 
